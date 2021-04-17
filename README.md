@@ -1,5 +1,3 @@
-# Noets on Basic Python for my own quick reference
-
 Dynamic Type System
 Readability
 Interpreted
@@ -414,6 +412,13 @@ print(x)
 
 ```
 
+#### Map in a different way
+```
+# [expression for item in items]
+prices = [item[1] for item in items]
+print(prices)
+```
+
 ### Filtering
 
 ```
@@ -421,4 +426,64 @@ print(x)
 ## convert the filter object in to a list.
 x = list(filter(lambda item: item[1] >= 10, items))
 print(x)
+```
+
+#### Filter in a different way
+
+```
+# Filter in a different way
+# [expression for item in items]
+filtered = [item for item in items if item[1] > 10]
+print(filtered)
+```
+
+### Zip
+
+zip(*iterables) --> A zip object yielding tuples until an input is exhausted.
+
+       list(zip('abcdefg', range(3), range(4)))  
+   [('a', 0, 0), ('b', 1, 1), ('c', 2, 2)]  
+The zip object yields n-length tuples, where n is the number of iterables passed as positional arguments to zip(). The i-th element in every tuple comes from the i-th iterable argument to zip(). This continues until the shortest argument is exhausted.
+
+
+### Generator
+```
+from sys import getsizeof
+# Generators
+# does not store values in memory
+# the size of the generator object does not change
+
+values = (x*2 for x in range(100000000))
+print("gen:", getsizeof(values))
+# print(values)
+# for x in values:
+#     print(x)
+
+
+## Generator does not support len
+```
+
+### Unpacking Operator
+
+```
+	numbers = [1,2,3]
+	print(*numbers)
+	
+otuput: 
+	1 2 3
+	
+
+Examples:
+	values = [*range(5)] # unpack a list
+	valeus = *"Hello World" # unpack a string
+	
+	#Unpacking dictionaries
+first = {"x": 1}
+second = {"x": 10, "y": 2}
+
+combined = {**first, **second, "z": 1}
+print(combined)
+
+	
+	
 ```

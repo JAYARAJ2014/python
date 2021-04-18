@@ -12,3 +12,5 @@ else:
 finally:
     file.close() #finally block closes the open file
 print("Execution continues...")
+
+## Compare this to try-catch-finally in C#

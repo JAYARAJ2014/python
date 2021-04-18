@@ -1,5 +1,6 @@
 class Animal:
     def __init__(self):
+        print("Animal Constructor")
         self.age = 1
 
     def eat(self):
@@ -7,6 +8,12 @@ class Animal:
 
 
 class Mammal(Animal):
+    def __init__(self):  # THis will override the parent class constructor.
+        # invoke constructor of the superclass / parent class.
+        super().__init__()
+        print("Mammal Constructor")
+        self.weight = 3
+
     def walk(self):
         print("Walk")
 
@@ -20,6 +27,7 @@ m = Mammal()
 m.eat()
 m.walk()
 print(m.age)
+print(m.weight)
 
 f = Fish()
 f.eat()

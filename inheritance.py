@@ -25,3 +25,10 @@ f = Fish()
 f.eat()
 f.swim()
 print(m.age)
+print(isinstance(f, Mammal))  # False
+print(isinstance(f, Fish))  # True
+print(isinstance(f, Animal))  # True
+print(isinstance(f, object))  # True
+
+issubclass(Mammal, Animal)  # True
+issubclass(Mammal, object)  # True

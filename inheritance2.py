@@ -1,11 +1,12 @@
-##Reasonable example of inheritance. 
+from abc import ABC, abstractclassmethod
+
 
 class InvalidOperationError(Exception):
     pass
 
 
-class Stream:
-    def __init__():
+class Stream(ABC):
+    def __init__(self):
         self.opened = False
 
     def open(self):
@@ -20,6 +21,10 @@ class Stream:
         self.opened = False
         print("File closed")
 
+    @abstractclassmethod
+    def read(self):
+        pass
+
 
 class FileStream(Stream):
     def read(self):
@@ -31,3 +36,11 @@ class NetworkStream(Stream):
         print("Reading... data from network")
 
 
+class MemoryStream(Stream):
+    def read(self):
+        print("Reading... data from memory")
+
+
+stream = FileStream()
+
+stream.open()

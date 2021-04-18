@@ -12,6 +12,9 @@ class Point:
     def zero(cls):
         return cls(0, 0)
 
+    def __str__(self): # Equivalent to ToString() in c#
+        return f"({self.x}, {self.y})"
+
 
 point = Point.zero()
 point.draw()
@@ -20,3 +23,4 @@ point.z = 90
 Point.default_color = "yellow"
 print(point.default_color)
 print(point.default_color)
+print(point)

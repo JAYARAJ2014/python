@@ -487,3 +487,30 @@ print(combined)
 	
 	
 ```
+
+### Module In Python
+
+a module is a file with code that handles similar stuff.
+Example:
+```
+sales.py
+
+def calculate_tax():
+    print('calculating tax...')
+
+
+def calculate_shipping():
+    print('calculating shipping...')
+
+
+```
+You can import in the following ways:
+
+```
+app.py
+
+from sales import calculate_shipping, calculate_tax
+import sales
+sales.calculate_tax()
+
+```

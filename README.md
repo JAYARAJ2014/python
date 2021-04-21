@@ -602,3 +602,15 @@ pipenv shell # to activate
 
 exit # to deactivate
 ```
+### Managing Dependancies
+
+pipfile
+
+```
+pipenv graph
+requests==2.25.1
+  - certifi [required: >=2017.4.17, installed: 2020.12.5]
+  - chardet [required: >=3.0.2,<5, installed: 4.0.0]
+  - idna [required: >=2.5,<3, installed: 2.10]
+  - urllib3 [required: >=1.21.1,<1.27, installed: 1.26.4]
+```

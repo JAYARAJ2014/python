@@ -1,0 +1,30 @@
+
+import subprocess
+
+
+completed = subprocess.run(["ls", "-l"],
+                           capture_output=True,
+                           text=True
+                           )
+# print(type(completed))
+
+print("args", completed.args)
+print("returncode", completed.returncode)
+print("stderr", completed.stderr)
+print("stdout", completed.stdout)
+
+
+#### Output
+args ['ls', '-l']
+returncode 0
+stderr 
+stdout total 104
+-rw-rw-r-- 1 user user   342 Apr 20 22:15 app.py
+-rw-rw-r-- 1 user user    86 Apr 20 21:07 browser.py
+-rw-rw-r-- 1 user user   743 Apr 19 22:39 csv-sample.py
+-rw-rw-r-- 1 user user    75 Apr 19 22:40 data.csv
+-rw-rw-r-- 1 user user   203 Apr 20 16:20 date-example.py
+-rw-r--r-- 1 user user 12288 Apr 19 23:14 db.sqlite3
+-rw-rw-r-- 1 user user   771 Apr 20 21:59 email-sample.py
+-rw-rw-r-- 1 user user   315 Apr 17 18:40 exceptions.py
+####

@@ -531,3 +531,21 @@ with open("data.csv", "w") as file:
 ```
 
 Note that if the file is named csv.py , then when you import csv you will get erro. 
+
+**Command Line arguments**
+```
+import sys
+
+print(sys.argv)
+print(len(sys.argv)) # Default is 1 even if youdont supply an argument.
+print(sys.argv[1])
+
+```
+
+#Output 
+```
+python3 "hello-world/app.py" hello world
+['hello-world/app.py', 'hello', 'world']
+3
+hello
+```

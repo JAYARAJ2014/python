@@ -575,3 +575,30 @@ latest compatible minor
 
 Semantic Versioning
 Example: `2.23.0`
+
+
+
+# Virtual Environments
+
+Two versions of cannot be side byside
+Install to virtual isolated env
+```
+python3 -m venv env
+source env/bin/activate
+
+```
+To deactivate venv
+`deactivate`
+
+use pipenv instead of memorizing all the above.
+```
+pip3 install pipenv
+
+pipenv install requests
+
+pipenv --venv #to view venv
+
+pipenv shell # to activate 
+
+exit # to deactivate
+```

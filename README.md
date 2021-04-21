@@ -549,3 +549,29 @@ python3 "hello-world/app.py" hello world
 3
 hello
 ```
+# Python Packages
+pypi.org 
+
+To handle HTTP requests
+`pip3 install requests `
+
+Upgrading PIP
+
+`pip3 install --upgrade pip`
+
+List currently installed packages
+
+`pip3 list`
+
+Install earlier version of a package
+`pip3 install requests==2.9.0`
+Uninstalling 
+`pip3 uninstall requests`
+Install latest compatible version of a major version of package
+`pip3 install requests==2.9.*`
+`pip3 install requests~=2.9.0`
+latest compatible minor
+`pip3 install requests~=2.*`
+
+Semantic Versioning
+Example: `2.23.0`
